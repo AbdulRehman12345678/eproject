@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <title>Astronomy </title>
+  <style>
+    body {
+      display: inline;
+      /* justify-content: center; */
+      /* align-items: center; */
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+
+    #container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+    
+    #sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+    }
+    
+    #earth {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+    h1{
+            color: white;
+            font-size: 2rem;
+        }
+        body {
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  /* background-color: #333; */
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+  color: gold;
+}
+
+.navbar li a:hover:after {
+  width: 100%;
+}
+footer {
+    background-color:black;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+  
+  footer h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: red;
+  }
+  
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+  }
+  
+  .social-icons {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 20px;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+  }
+  
+  .social-icons li a:hover {
+    background-color: white;
+    color: #fff;
+  }
+  
+   /* footer hr {
+    border-top: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }  */
+  
+  footer p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  footer .row{
+    text-align: center;
+  }
+  .contact{
+	background: #d9dbdf;
+	padding:0px 0px;
+    margin-bottom: 10px;
+ }
+
+ body {
+	min-height: 100vh;
+	/* display: grid; */
+	place-content: center;
+	/* background: midnightblue; */
+    background-color: black;
+    text-align: center;
+}
+
+space {
+	display: block;
+	position: relative;
+	width: 700px;
+	height: 500px;
+	/* background: midnightblue; */
+    background: black;
+}
+
+
+planet {
+	display: block;
+	position: absolute;
+	width: 75px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: all ease-in-out 2s;
+	animation: wiggle 10s infinite alternate ease-in-out;
+}
+@keyframes wiggle {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	
+	25% {
+		transform: translate(-51%, -48%);
+	}
+	
+	50% {
+		transform: translate(-49%, -52%);
+	}
+	
+	75% {
+		transform: translate(-52%, -50%);
+	}
+	
+	100% {
+		transform: translate(-51%, -49%);
+	}
+}
+planet:first-child {
+	animation: movingColors 6s infinite alternate linear, wiggle 10s infinite alternate ease-in-out;
+}
+
+@keyframes movingColors {
+	0% {
+		background: darkcyan;
+	}
+	25% {
+		background: darkseagreen;
+	}
+	50% {
+		background: seagreen;
+	}
+	75% {
+		background: teal;
+	}
+	100% {
+		background: darkslategray;
+	}
+}
+
+planet:nth-child(2) {
+	background: rebeccapurple;
+	animation-delay: -1s;
+}
+planet:nth-child(3) {
+	background: radial-gradient(firebrick, orangered, gold);
+	box-shadow: 0 0 30px 10px orange;
+	animation-delay: -5s;
+}
+
+planet:last-child {
+	background: dodgerblue;
+	perspective: 50em;
+	animation-delay: -7s;
+}
+
+/* BLAUER PLANET MIT RINGEN */
+planet:last-child:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 120%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateX(70deg) rotateY(10deg);
+	border-radius: 100%;
+	border: 30px solid skyblue;
+	outline: 10px solid steelblue;
+	outline-offset: 5px;
+	transition: all ease-in-out 2s;
+}
+planet:last-child.hidden:before {
+	border-width: 20px;
+
+.idth: 20px;
+}
+
+planet:last-child:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, dodgerblue 50%, transparent);
+	border-radius: 100%;
+}
+planet:nth-child(2):before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateX(60deg) rotateY(150deg);
+	border-radius: 100%;
+	border: 0px solid skyblue;
+	box-shadow: 0 0 20px 20px coral;
+	border-top: none;
+	transition: all ease-in-out 2s;
+}
+
+planet:nth-child(2).center:before {
+	box-shadow: 0 0 40px 40px coral;
+	/*outline: 20px solid orangered;
+	outline-offset: 50px;
+	outline-style: double;*/
+}
+planet:nth-child(2).hidden:before {
+	box-shadow: 0 0 15px 15px coral;
+}
+
+planet:nth-child(2):after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(145deg, transparent 50%, rebeccapurple 0);
+	border-radius: 100%;
+}
+
+.hidden {
+	top: 40%;
+	left: 50%;
+}
+
+.left {
+	width: 100px;
+	top: 50%;
+	left: 15%;
+}
+
+.right {
+	width: 100px;
+	top: 50%;
+	left: 85%;
+}
+
+.center {
+	width: 200px;
+	top: 60%;
+	left: 50%;
+	z-index: 2;
+}
+You sent
+.z-1 {
+	z-index: 1;
+}
+
+.z-0 {
+	z-index: 0;
+}
+space {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px; /* Add margin for better spacing */
+        }
+
+        planet {
+            width: 50px; /* Adjust the width based on your design */
+            height: 50px; /* Adjust the height based on your design */
+            background-color: blue; /* Set the background color or any other styling */
+            border-radius: 50%; /* Make it round */
+        }
+
+        @media (max-width: 600px) {
+            space {
+                flex-direction: column; /* Change to a column layout on smaller screens */
+                align-items: center; /* Center items in a column layout */
+            }
+        }
+  </style>
+    <script>
+      const switchPlanet = event => {
+          const center = document.querySelector('.center');
+          const hidden = document.querySelector('.hidden');
+          const left = document.querySelector('.left');
+          const right = document.querySelector('.right');
+
+          if (event?.target?.classList?.contains('left')) {
+              left.classList.remove('z-1');
+              left.classList.replace('left', 'center');
+              center.classList.add('z-1');
+              center.classList.remove('z-0');
+              center.classList.replace('center', 'right');
+              right.classList.remove('z-1');
+              right.classList.add('z-0');
+              right.classList.replace('right', 'hidden');
+              hidden.classList.replace('hidden', 'left');
+              hidden.classList.remove('z-0');
+              hidden.classList.add('z-1');
+          }
+
+          if (event?.target?.classList?.contains('right')) {
+              left.classList.replace('left', 'hidden');
+              left.classList.remove('z-1');
+              left.classList.add('z-0');
+              center.classList.replace('center', 'left');
+              center.classList.add('z-1');
+              center.classList.remove('z-0');
+              right.classList.replace('right', 'center');
+              right.classList.add('z-1');
+              right.classList.remove('z-0');
+          }
+      };
+  </script>
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      
+        <span class="ml-3 text-xl " style="color:whitesmoke ; font-size: 2rem ; font-family: Arial black;"><b>ASTRONOMY</b> </span>
+      </a>
+     
+      <body>
+        <nav class="navbar md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="astronomy.html">Astronomy</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            
+            
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </body>
+      
+    
+    </div>
+  </header>
+
+
+  
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" style="color: whitesmoke;">About Astronomy
+                  <br class="hidden lg:inline-block">
+                </h1>
+                <p class="mb-8 leading-relaxed" style="color: whitesmoke;">Astronomy is the scientific study of celestial objects, such as stars, planets, galaxies, and other phenomena that exist outside of Earth's atmosphere. It is one of the oldest natural sciences, with a rich history dating back thousands of years.
+
+                    Astronomy involves observing and understanding the physical properties, movements, and interactions of celestial objects. Scientists use various tools and techniques to study these objects, including telescopes, satellites, space probes, and computer simulations.
+                    
+                    Here are some key aspects and areas of study in astronomy:
+                    
+                    Celestial Objects: Astronomers study a wide range of celestial objects, including stars, planets, moons, asteroids, comets, galaxies, and nebulae. Each type of object has its own unique properties and characteristics.
+                    
+                    Stellar Evolution: The life cycles of stars, from their formation through various stages to their ultimate fate, is a major focus in astronomy. This includes understanding processes such as nuclear fusion, supernovae, and the formation of black holes and neutron stars.
+                    
+                    Planetary Science: This field involves the study of planets, their moons, and other objects within our solar system. It includes investigating planetary composition, atmospheres, geological processes, and the possibility of extraterrestrial life.</p>
+                <div class="flex justify-center">
+                 
+                </div>
+              </div>
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="ok.png">
+              </div>
+            </div>
+          </section> 
+<center>         <space>
+  <planet class="hidden" onclick="switchPlanet(event)"></planet>
+  <planet class="left" onclick="switchPlanet(event)"></planet>
+  <planet class="center" onclick="switchPlanet(event)"></planet>
+  <planet class="right" onclick="switchPlanet(event)"></planet>
+</space>
+      </center>
+
+
+
+          <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" style="color: whitesmoke;">About Astronodes
+                  <br class="hidden lg:inline-block">
+                </h1>
+                <p class="mb-8 leading-relaxed" style="color: whitesmoke;">
+                  
+                  Astronodes is a term that does not have a widely recognized definition or meaning within the context of astronomy or space science. It is possible that it could be a term coined or used within a specific niche or domain that is not well-known or documented in general sources. Without more specific information or context, it is challenging to provide a detailed description or paragraph about astronodes. If you can provide additional information or clarify the context in which the term is being used, I would be happy to assist you further.
+                  
+                  Alternatively, "astronodes" might also be interpreted as nodes or interconnected points within an astronomical data network, facilitating the exchange, analysis, and dissemination of astronomical data among researchers, institutions, and observatories worldwide. These astronodes could act as hubs for data transmission, storage, and collaborative research, enabling the advancement of astronomical knowledge and discoveries</p>
+                <div class="flex justify-center">
+                 
+                </div>
+              </div>
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="astroooooo.png" style="border-radius: 200px;">
+              </div>
+            </div>
+          </section> 
+ <br>
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1" style="color: whitesmoke; font-family: Broadway; font-size: x-large;">ROTATION OF EARTH AROUND THE SUN</h2>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"></h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base" style="color: whitesmoke;"> The rotation of the Earth around the Sun is a fundamental astronomical phenomenon known as a revolution. It takes approximately 365.25 days for the Earth to complete one orbit around the Sun, resulting in the cycle of seasons and the annual calendar. This revolution is responsible for the changing positions of celestial objects throughout the year.</p>
+    </div>
+   <center>
+  <div id="container">
+    <div id="sun"></div>
+     <div id="earth"></div>
+  </div> 
+</center>
+
+  <script>
+    var sun = document.getElementById("sun");
+    var earth = document.getElementById("earth");
+    
+    var angle = 0;
+    var radius = 150;
+    var speed = 0.02;
+    
+    function animate() {
+      angle += speed;
+      var x = Math.cos(angle) * radius;
+      var y = Math.sin(angle) * radius;
+      
+      earth.style.left = sun.offsetLeft + x + "px";
+      earth.style.top = sun.offsetTop + y + "px";
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  </script>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>FOR QUERIES</h2>
+          
+           
+            <h5>CONTACT US</h5>
+            <h5>TERMS AND CONDITION</h5>
+        
+        </div>
+        <div class="col-md-4">
+          <h2>Follow Us</h2>
+          <ul class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <hr> -->
+          <h3>&copy; Aptech | All Rights Reserved</h3>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+   
+</body>
+</html>

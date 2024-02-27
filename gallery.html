@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gallery</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        body {
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  /* background-color: #333; */
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+  color: gold;
+}
+
+.navbar li a:hover:after {
+  width: 100%;
+}
+footer {
+    background-color:black;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+  
+  footer h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: red;
+  }
+  
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+  }
+  
+  .social-icons {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 20px;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+  }
+  
+  .social-icons li a:hover {
+    background-color: white;
+    color: #fff;
+  }
+  
+   /* footer hr {
+    border-top: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }  */
+  
+  footer p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  footer .row{
+    text-align: center;
+  }
+  .contact{
+	background: #d9dbdf;
+	padding:0px 0px;
+    margin-bottom: 10px;
+ }
+
+    </style>
+</head>
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    
+      <span class="ml-3 text-xl " style="color:whitesmoke ; font-size: 2rem ; font-family: Arial black;"><b>GALLERY </b> </span>
+    </a>
+   
+    <body>
+      <nav class="navbar md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center" >
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="astronomy.html">Astronomy</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </body>
+    
+  
+
+  </div>
+</header>
+
+
+   
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="mar.png">
+              </a>
+              <div class="mt-4">
+                <center>  <h1 style="color: white; font-size: x-large;">Mercury</h1>
+                <p  style="color: whitesmoke;">Small, rocky planet closest to the Sun with a barren surface and extreme temperature variations.</p>
+                </center>
+
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="ven.png">
+              </a>
+              <div class="mt-4">
+                <center>  <h1 style="color: white; font-size: x-large;">Venus</h1>
+                <p  style="color: whitesmoke;">Shrouded in a thick, toxic atmosphere, Venus is a scorching planet often called Earth's "evil twin."</p>
+                </center>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="earth.png">
+              </a>
+              <div class="mt-4">
+                <center> <h1 style="color: white; font-size: x-large;">Earth</h1>
+                <p  style="color: whitesmoke;">Our home, teeming with life, water, and a diverse range of ecosystems.</p>
+                </center>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="mars.png">
+              </a>
+              <div class="mt-4">
+                <center><h1 style="color: white; font-size: x-large;">Mars</h1>
+                <p  style="color: whitesmoke;">The Red Planet, with polar ice caps and a history of potential habitability.</p>
+                </center>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="jup.png">
+              </a>
+              <div class="mt-4">
+                <center><h1 style="color: white; font-size: x-large;">Jupiter</h1>
+                <p  style="color: whitesmoke;"> Largest planet with swirling storms and a mesmerizing, banded appearance.</p>
+                </center>
+               
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="sat.png">
+              </a>
+              <div class="mt-4">
+                <center> <H1 style="color: white; font-size: x-large;">Saturn</H1>
+                <p style="color: whitesmoke;"> Known for its iconic rings, Saturn is a gas giant with a captivating presence.</p>
+                </center>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="ura.png">
+              </a>
+              <div class="mt-4">
+                <center> <H1 style="color: white; font-size: x-large;">Uranus</H1>
+                <p  style="color: whitesmoke;">An ice giant tilted on its side, Uranus showcases an intriguing bluish-green hue.</p>
+                </center>
+              </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="nap.png">
+              </a>
+              <div class="mt-4">
+             <center> <H1 style="color: white; font-size: x-large;">Neptune</H1>
+              <p  style="color: whitesmoke;"> The farthest planet, Neptune is a deep blue ice giant with powerful winds and storms.</p>
+            </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>FOR QUERIES</h2>
+              
+                
+                <h5>CONTACT US</h5>
+                <h5>TERMS AND CONDITION</h5>
+            
+            </div>
+            <div class="col-md-4">
+              <h2>Follow Us</h2>
+              <ul class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <hr> -->
+              <h3>&copy; Aptech | All Rights Reserved</h3>
+    
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
